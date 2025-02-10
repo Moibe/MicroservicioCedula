@@ -20,10 +20,9 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Usar la política de CORS
+// Con ésto estoy usando lo de CORS
 app.UseCors("AllowAllOrigins");
 
-// Configurar el pipeline de la aplicación
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
